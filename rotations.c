@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotations.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42>             +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:30:48 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 15:46:05 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/15 19:37:23 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ t_elem	**rotate_a(t_elem **stack)
 	last->top = NULL;
 	stack[1]->bot = NULL;
 	stack[1] = last;
+	ft_putstr_fd("ra\n", 1);
 	return (stack);
 }
 
@@ -44,6 +45,7 @@ t_elem	**rev_rotate_a(t_elem **stack)
 	stack[1]->bot = NULL;
 	last->top = NULL;
 	stack[1] = last;
+	ft_putstr_fd("rra\n", 1);
 	return (stack);
 }
 
@@ -58,6 +60,7 @@ t_elem	**rotate_b(t_elem **stack)
 	last->top = NULL;
 	stack[2]->bot = NULL;
 	stack[2] = last;
+	ft_putstr_fd("rb\n", 1);
 	return (stack);
 }
 
@@ -72,5 +75,6 @@ t_elem	**rev_rotate_b(t_elem **stack)
 	stack[2]->bot = NULL;
 	last->top = NULL;
 	stack[2] = last;
+	ft_putstr_fd("rrb\n", 1);
 	return (stack);
 }

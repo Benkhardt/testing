@@ -3,18 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42>             +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:13:10 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 16:28:49 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/15 21:46:43 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+static char	*conv_base(int argc, int base, char *nbrs)
+{
+	
+}
+
+int	get_max_shift(int argc)
+{
+	return (ft_strlen(conv_base(argc, 2, "01")));
+}
+
 int	check_bit(int shift, t_elem *stack)
 {
-
+	while (stack != NULL)
+	{
+		if (!((stack->lable >> shift) & 1))
+			return (1);
+		stack = stack->bot;
+	}
+	return (0);
 }
 
 void	printlist(t_elem *top)
@@ -30,44 +46,4 @@ void	printlist(t_elem *top)
 		ft_putchar_fd('\n', 1);
 		tmp = tmp->bot;
 	}
-}
-
-t_elem	**swap_a(t_elem **stack)
-{
-	if (stack[1]->bot == NULL)
-		return ;
-	stack[0] = stack[1]->bot;
-	stack[0]->top = NULL;
-	stack[1]->bot = stack[0]->bot;
-
-}
-
-t_elem	**push_a(t_elem **stack)
-{
-	t_elem	*tmp;
-
-	tmp = stack[1]->bot;
-	stack[1]->bot = stack[2];
-	if (stack[2] != NULL)
-		stack[2]->top = stack[1];
-	stack[2] = stack[1];
-	stack[1] = tmp;
-	if (stack[1] != NULL)
-		stack[1]->top = NULL;
-	return (stack);
-}
-
-t_elem	**push_b(t_elem **stack)
-{
-	t_elem	*tmp;
-
-	tmp = stack[2]->bot;
-	stack[2]->bot = stack[1];
-	if (stack[1] != NULL)
-		stack[1]->top = stack[2];
-	stack[1] = stack[2];
-	stack[2] = tmp;
-	if (stack[2] != NULL)
-		stack[2]->top = NULL;
-	return (stack);
 }

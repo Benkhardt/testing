@@ -6,7 +6,7 @@
 /*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:16:20 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 12:54:01 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/15 21:38:43 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ void	push_swap(int argc, char **argv)
 		free(store);
 		return ;
 	}
-	ft_putstr_fd("stack a\n", 1);
+	// ft_putstr_fd("stack a\n", 1);
+	// printlist(stack[1]);
+	stack = sort_small(stack, get_max_shift(argc - 2));
+	ft_putstr_fd("stack a sorted\n", 1);
 	printlist(stack[1]);
 	free_stacks(stack);
 	free(store);

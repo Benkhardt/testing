@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   sort_small.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42>             +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 15:32:57 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 16:18:43 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/15 22:24:05 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // Sorts a stack less equal 5 elements
-t_elem	**sort_small(t_elem **stack)
+t_elem	**sort_small(t_elem **stack, int max_shift)
 {
 	int		shift;
 	t_elem	*last;
 	
 	shift = 0;
 	last = NULL;
-	while (shift < 3)
+	while (shift < 4) // have to get max_shift out of argc!
 	{
 		while (check_bit(shift, stack[1]) && stack[1] != NULL)
 		{
@@ -32,9 +32,8 @@ t_elem	**sort_small(t_elem **stack)
 			{
 				stack = swap_a(stack); // getting new stack top aswell
 				stack = push_a(stack);
-				stack[0] = stack[1]->bot;
 			}
-			else if (!((last->lable >> shift) & 1) && last->lable != NULL)
+			else if (!((last->lable >> shift) & 1) && last != NULL)
 			{	
 				stack = rev_rotate_a(stack);
 				stack = push_a(stack);
@@ -46,4 +45,5 @@ t_elem	**sort_small(t_elem **stack)
 		while (stack[2] != NULL)
 			push_b(stack);
 	}
+	return (stack);
 }

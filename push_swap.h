@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42>             +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:16:42 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 15:46:16 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/15 21:35:31 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	push_swap(int argc, char **argv);
 
 t_elem	*find_last_elem(t_elem	*stack);
 
-t_elem	**sort_small(t_elem **stack);
+t_elem	**sort_small(t_elem **stack, int max_shift);
 
 t_elem	**sort_three(t_elem **stack);
 
@@ -49,7 +49,11 @@ t_elem	**push_b(t_elem **stack);
 
 void	printlist(t_elem *top);
 
-void	swap(t_elem *top);
+int		get_max_shift(int argc);
+
+t_elem	**swap_a(t_elem **stack);
+
+t_elem	**swap_b(t_elem **stack);
 
 t_elem	**rotate_a(t_elem **stack);
 
