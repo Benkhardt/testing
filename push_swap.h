@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:16:42 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 12:56:43 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/15 15:46:16 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,17 @@ typedef struct s_elem{
 
 void	push_swap(int argc, char **argv);
 
+t_elem	*find_last_elem(t_elem	*stack);
+
+t_elem	**sort_small(t_elem **stack);
+
+t_elem	**sort_three(t_elem **stack);
+
 t_elem	**init_stack_a(int argc, char **argv, t_elem **stack);
 
 t_elem	*lable(int argc, t_elem *topa);
+
+int	check_bit(int shift, t_elem *stack);
 
 // t_elem	**sort_small_stack(t_elem **stack);
 

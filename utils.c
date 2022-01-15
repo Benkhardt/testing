@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:13:10 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 12:55:16 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/15 16:28:49 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	check_bit(int shift, t_elem *stack)
+{
+
+}
 
 void	printlist(t_elem *top)
 {
@@ -27,17 +32,14 @@ void	printlist(t_elem *top)
 	}
 }
 
-void	swap(t_elem *top)
+t_elem	**swap_a(t_elem **stack)
 {
-	int		store_value;
-	t_elem	*elem;
-
-	if (top->bot == NULL)
+	if (stack[1]->bot == NULL)
 		return ;
-	elem = top->bot;
-	store_value = top->value;
-	top->value = elem->value;
-	elem->value = store_value;
+	stack[0] = stack[1]->bot;
+	stack[0]->top = NULL;
+	stack[1]->bot = stack[0]->bot;
+
 }
 
 t_elem	**push_a(t_elem **stack)

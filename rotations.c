@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rotations.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:30:48 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 12:51:06 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/15 15:46:05 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_elem	*find_last_elem(t_elem	*stack)
+t_elem	*find_last_elem(t_elem	*stack)
 {
 	while (stack->bot != NULL)
 		stack = stack->bot;
