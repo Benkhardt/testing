@@ -13,37 +13,37 @@
 #include "push_swap.h"
 
 // Sorts a stack less equal 5 elements
-t_elem	**sort_small(t_elem **stack, int max_shift)
+t_elem	**sort_big(t_elem **stack, int max_shift)
 {
 	int		shift;
+	int		check;
 	t_elem	*last;
 	
 	shift = 0;
-	last = NULL;
-	while (shift < 4) // have to get max_shift out of argc!
+	check = 0;
+	while (shift <= max_shift)
 	{
 		while (check_bit(shift, stack[1]) && stack[1] != NULL)
 		{
+			ft_putnbr_fd(stack[1]->lable, 1);
 			last = find_last_elem(stack[1]);
-			stack[0] = stack[1]->bot;
-			if (!((stack[1]->lable >> shift) & 1))
-				stack = push_a(stack); // we have to get new stack top
-			else if (!((stack[0]->lable >> shift) & 1) && stack[0] != NULL)
-			{
-				stack = swap_a(stack); // getting new stack top aswell
+			// stack[0] = stack[1]->bot;
+			if (!((stack[1]->lable >> shift) & 1) && stack[1]->lable >= check)
 				stack = push_a(stack);
-			}
-			else if (!((last->lable >> shift) & 1) && last != NULL)
-			{	
-				stack = rev_rotate_a(stack);
-				stack = push_a(stack);
-			}
+			else if (!((last->lable >> shift) & 1) && last->lable >= check)
+				stack = push_a(rev_rotate_a(stack));
 			else
 				stack = rotate_a(stack);
 		}
+		ft_putstr_fd("stack a:\n", 1); // DEBUG
+		printlist(stack[1]);
+		ft_putstr_fd("stack b:\n", 1); // DEBUG
+		if (stack[2] != NULL)
+			printlist(stack[2]);
 		shift++;
+		check = shift * 2;
 		while (stack[2] != NULL)
-			push_b(stack);
+			stack = push_b(stack);
 	}
 	return (stack);
 }

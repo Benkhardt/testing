@@ -29,9 +29,11 @@ void	push_swap(int argc, char **argv);
 
 t_elem	*find_last_elem(t_elem	*stack);
 
-t_elem	**sort_small(t_elem **stack, int max_shift);
+t_elem	**sort_big(t_elem **stack, int max_shift);
 
 t_elem	**sort_three(t_elem **stack);
+
+// t_elem	**sort_five(t_elem **stack);
 
 t_elem	**init_stack_a(int argc, char **argv, t_elem **stack);
 
@@ -46,6 +48,8 @@ int	check_bit(int shift, t_elem *stack);
 t_elem	**push_a(t_elem **stack);
 
 t_elem	**push_b(t_elem **stack);
+
+t_elem	**sort_three(t_elem **stack);
 
 void	printlist(t_elem *top);
 

@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-t_elem **sort_three(t_elem **stack)
+t_elem	**sort_three(t_elem **stack)
 {
 	stack[0] = find_last_elem(stack[1]);
 	if (stack[1]->lable == 1 && stack[0]->lable == 2)

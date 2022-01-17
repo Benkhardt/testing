@@ -30,11 +30,16 @@ void	push_swap(int argc, char **argv)
 		free(store);
 		return ;
 	}
+	if (argc < 5)
+		stack = sort_three(stack);
+	// if (argc < 7)
+	// 	stack = sort_five(stack);
 	// ft_putstr_fd("stack a\n", 1);
 	// printlist(stack[1]);
-	stack = sort_small(stack, get_max_shift(argc - 2));
+	if (argc > 6)
+		stack = sort_big(stack, get_max_shift(argc - 1));
 	ft_putstr_fd("stack a sorted\n", 1);
 	printlist(stack[1]);
 	free_stacks(stack);
 	free(store);
-}
+	}
