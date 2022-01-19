@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:16:20 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 21:38:43 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/19 21:49:04 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	push_swap(int argc, char **argv)
 	}
 	if (argc < 5)
 		stack = sort_three(stack);
-	// if (argc < 7)
+	// if (argc >= 5)
 	// 	stack = sort_five(stack);
 	// ft_putstr_fd("stack a\n", 1);
 	// printlist(stack[1]);
@@ -42,4 +42,4 @@ void	push_swap(int argc, char **argv)
 	printlist(stack[1]);
 	free_stacks(stack);
 	free(store);
-	}
+}

@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 	{
 		ft_putstr_fd("Error\n", 1);
 		return (-1);
-	}	
+	}
 	push_swap(argc, argv);
 	return (0);
 }
