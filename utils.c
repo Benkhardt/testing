@@ -6,7 +6,7 @@
 /*   By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:13:10 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/21 01:51:23 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/21 15:47:05 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,13 @@ char	*conv_base(int argc, char *rtn)
 
 int	get_max_shift(int argc)
 {
-	return (ft_strlen(conv_base(argc, NULL)) - 1);
+	char	*tmp;
+	int		rtn;
+
+	tmp = conv_base(argc, NULL);
+	rtn = ft_strlen(tmp) - 1;
+	free(tmp);
+	return (rtn);
 }
 
 int	check_bit(int shift, t_elem *stack)
