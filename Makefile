@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+         #
+#    By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/15 11:17:05 by dbenkhar          #+#    #+#              #
-#    Updated: 2022/01/15 11:17:35 by dbenkhar         ###   ########.fr        #
+#    Updated: 2022/01/21 03:20:48 by dbenkhar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS =	*.c
 CC = gcc
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 LIBFT = ./libft/libft.a
 
