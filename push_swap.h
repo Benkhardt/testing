@@ -6,7 +6,7 @@
 /*   By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:16:42 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/21 01:50:41 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/21 02:45:29 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 # include "libft/libft.h"
-# include <stdio.h>
 # include <stdlib.h> 
 # include <unistd.h>
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:15:29 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 12:41:16 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/21 02:47:06 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_elem	**init_stack_a(int argc, char **argv, t_elem **stack)
 {
 	while (--argc > 0)
 	{
-		stack[1] = create_elem_ontop(atoi(argv[argc]), stack[0]);
+		stack[1] = create_elem_ontop(ft_atoi(argv[argc]), stack[0]);
 		if (stack[0] != NULL)
 			stack[0]->top = stack[1];
 		stack[0] = stack[1];
