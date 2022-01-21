@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_big.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 15:32:57 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/21 02:27:25 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/21 16:06:28 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,8 @@ static t_elem	**sorting(t_elem **stack, int shift)
 t_elem	**sort_big(t_elem **stack, int max_shift)
 {
 	int		shift;
-	int		count;
 
 	shift = -1;
-	count = 0;
 	while (++shift <= max_shift)
 	{
 		stack = sorting(stack, shift);
