@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:16:42 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 21:35:31 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/21 01:50:41 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ t_elem	**sort_big(t_elem **stack, int max_shift);
 
 t_elem	**sort_three(t_elem **stack);
 
-// t_elem	**sort_five(t_elem **stack);
+t_elem	**sort_five(t_elem **stack);
 
 t_elem	**init_stack_a(int argc, char **argv, t_elem **stack);
 
 t_elem	*lable(int argc, t_elem *topa);
 
-int	check_bit(int shift, t_elem *stack);
+int		check_bit(int shift, t_elem *stack);
 
 // t_elem	**sort_small_stack(t_elem **stack);
 
@@ -48,8 +48,6 @@ int	check_bit(int shift, t_elem *stack);
 t_elem	**push_a(t_elem **stack);
 
 t_elem	**push_b(t_elem **stack);
-
-t_elem	**sort_three(t_elem **stack);
 
 void	printlist(t_elem *top);
 

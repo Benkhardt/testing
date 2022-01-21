@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 19:25:29 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/15 19:31:56 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/20 21:48:33 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_elem	**push_a(t_elem **stack)
 	stack[1] = tmp;
 	if (stack[1] != NULL)
 		stack[1]->top = NULL;
-	ft_putstr_fd("pa\n", 1);
+	ft_putstr_fd("pb\n", 1);
 	return (stack);
 }
 
@@ -40,6 +40,6 @@ t_elem	**push_b(t_elem **stack)
 	stack[2] = tmp;
 	if (stack[2] != NULL)
 		stack[2]->top = NULL;
-	ft_putstr_fd("pb\n", 1);
+	ft_putstr_fd("pa\n", 1);
 	return (stack);
 }

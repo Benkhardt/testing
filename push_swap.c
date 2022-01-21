@@ -6,7 +6,7 @@
 /*   By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:16:20 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/19 21:49:04 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/20 22:17:49 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,10 @@ void	push_swap(int argc, char **argv)
 	}
 	if (argc < 5)
 		stack = sort_three(stack);
-	// if (argc >= 5)
-	// 	stack = sort_five(stack);
-	// ft_putstr_fd("stack a\n", 1);
-	// printlist(stack[1]);
+	if (argc >= 5 && argc < 7)
+		stack = sort_five(stack);
 	if (argc > 6)
 		stack = sort_big(stack, get_max_shift(argc - 1));
-	ft_putstr_fd("stack a sorted\n", 1);
-	printlist(stack[1]);
 	free_stacks(stack);
 	free(store);
 }

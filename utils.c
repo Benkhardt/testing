@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbenkhar <dbenkhar@student.42>             +#+  +:+       +#+        */
+/*   By: dbenkhar <dbenkhar@students.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:13:10 by dbenkhar          #+#    #+#             */
-/*   Updated: 2022/01/17 20:51:42 by dbenkhar         ###   ########.fr       */
+/*   Updated: 2022/01/21 01:51:23 by dbenkhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	get_max_shift(int argc)
 
 int	check_bit(int shift, t_elem *stack)
 {
-	int check;
+	int	check;
 
 	check = shift * 2;
 	while (stack != NULL)
